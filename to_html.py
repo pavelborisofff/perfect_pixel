@@ -3,6 +3,8 @@ from PIL import Image
 head = """<!DOCTYPE html>
 <html lang="en">
 <head>
+    <!--  Check the source picture  -->
+    <!--  https://pavelborisofff.github.io/perfect_pixel/img/source.png  -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -20,7 +22,7 @@ with open('index.html', 'w', encoding='utf-8') as f:
 
 im = Image.open('img/source.png')
 with open('index.html', 'a', encoding='utf-8') as f:
-    f.write(f'<table width="{im.size[0]}" height="{im.size[1]}" cellspacing="0" cellpadding="0">')
+    f.write(f'<table width="{im.size[0]}" height="{im.size[1]}" cellspacing="0" cellpadding="0" style="margin:auto">')
 
 with open('index.html', 'a') as f:
     for y in range(im.size[1]):
