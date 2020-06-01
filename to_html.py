@@ -15,14 +15,14 @@ footer = """</table>
 </html>
 """
 
-with open('test.html', 'w', encoding='utf-8') as f:
+with open('index.html', 'w', encoding='utf-8') as f:
     f.write(head)
 
 im = Image.open('img/source.png')
-with open('test.html', 'a', encoding='utf-8') as f:
+with open('index.html', 'a', encoding='utf-8') as f:
     f.write(f'<table width="{im.size[0]}" height="{im.size[1]}" cellspacing="0" cellpadding="0">')
 
-with open('test.html', 'a') as f:
+with open('index.html', 'a') as f:
     for y in range(im.size[1]):
         f.write('<tr>\n')
         for x in range(im.size[0]):
